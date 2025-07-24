@@ -4,7 +4,7 @@ document.body.appendChild(getSumBtn);
 
 const getSum = () => {
 //Add your code here
-              const priceElements = document.querySelectorAll('.price');
+  const priceElements = document.querySelectorAll('.price');
             
             // Initialize total sum
             let totalPrice = 0;
@@ -29,10 +29,11 @@ const getSum = () => {
             const totalRow = document.createElement('tr');
             totalRow.className = 'total-row';
             
-            // Create cell that spans both columns
+            // Create cell that spans both columns with id="ans" for the test
             const totalCell = document.createElement('td');
             totalCell.colSpan = 2;
-            totalCell.textContent = `Total: Rs ${totalPrice}`;
+            totalCell.id = "ans";
+            totalCell.textContent = totalPrice; // Just the number as expected by test
             totalCell.style.textAlign = 'center';
             
             // Add cell to row
